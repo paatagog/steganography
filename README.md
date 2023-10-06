@@ -47,15 +47,15 @@ from google.colab import drive
 drive.mount('/content/drive')
 
 # Read the Pictures
-public_img = np.asarray(Image.open('drive/MyDrive/Cyber/cat.png'), dtype='uint8').copy()
-secret_img = np.asarray(Image.open('drive/MyDrive/Cyber/dog.png'), dtype='uint8').copy()
+public_img = np.asarray(Image.open('drive/MyDrive/Cyber/cat.png')).copy()
+secret_img = np.asarray(Image.open('drive/MyDrive/Cyber/dog.png')).copy()
 ```
 
 You need the following section if the previous one was skipped. If you have executed the program locally, then you will need the following section in order to read private and the public pictures from the files.
 
 ```Python
-public_img = np.asarray(Image.open('pictures/cat.png'), dtype='uint8').copy()
-secret_img = np.asarray(Image.open('pictures/dog.png'), dtype='uint8').copy()
+public_img = np.asarray(Image.open('pictures/cat.png')).copy()
+secret_img = np.asarray(Image.open('pictures/dog.png')).copy()
 ```
 
 Let's show the secret image on the screen. Note that the display size of the image (which we see on the screen) was automatically selected by the library function and does not correspond to the actual size. To determine the number of points in the image, we should use the numbers written on the axes. In our case, it is even convenient, because the image of the dog is small, and zooming in to see it better is not a bad solution.
@@ -84,7 +84,7 @@ Let's prepare working functions.
 
 ```Python
 # Gets one pixel from the image
-def get_pixel(img, x, y) -> np.uint8:
+def get_pixel(img, x, y):
   return img[x, y]
 
 
@@ -96,7 +96,7 @@ def set_pixel(img, x, y, r, g, b):
 
 
 # Splitting one channel of the pixel into 2 bit fragments
-def chop(c) -> np.uint8:
+def chop(c):
   return c >> 6, (c & 48) >> 4, (c & 12) >> 2, (c & 3)
 
 

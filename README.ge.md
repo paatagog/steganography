@@ -50,15 +50,15 @@ from google.colab import drive
 drive.mount('/content/drive')
 
 # წავიკითხოთ სურათები
-public_img = np.asarray(Image.open('drive/MyDrive/Cyber/cat.png'), dtype='uint8').copy()
-secret_img = np.asarray(Image.open('drive/MyDrive/Cyber/dog.png'), dtype='uint8').copy()
+public_img = np.asarray(Image.open('drive/MyDrive/Cyber/cat.png')).copy()
+secret_img = np.asarray(Image.open('drive/MyDrive/Cyber/dog.png')).copy()
 ```
 
 თუ წინა სექცია გამოვტოვეთ, ანუ თუ ლოკალურად გვაქვს პროგრამა გაშვებული, მხოლოდ მაშინ დაგვჭირდება შემდეგი სექციის გაშვება, იმისთვის, რომ წავიკითხოთ საიდუმლო და საჯარო სურათები ფაილებიდან.
 
 ```Python
-public_img = np.asarray(Image.open('pictures/cat.png'), dtype='uint8').copy()
-secret_img = np.asarray(Image.open('pictures/dog.png'), dtype='uint8').copy()
+public_img = np.asarray(Image.open('pictures/cat.png')).copy()
+secret_img = np.asarray(Image.open('pictures/dog.png')).copy()
 ```
 
 ვაჩვენოთ საიდუმლო სურათი ეკრანზე. გაითვალისწინეთ, რომ სურათის საჩვენებელი ზომა (რომელსაც ეკრანზე ვხედავთ) ავტომატურად შეარჩია ბიბლიოთეკის ფუნქციამ და არ შეესაბამება რეალურ ზომას. სურათის წერტილების რაოდენობის დასადგენად უნდა ვისარგებლოთ ღერძებზე მიწერილი რიცხვებით. ჩვენს შემთხვევაში ეს მოსახერხებელიც კი არის, რადგან ძაღლის სურათი მომცროა და უკეთ დასანახად გადიდება არაა ურიგო გამოსავალი.
@@ -87,7 +87,7 @@ plt.show()
 
 ```Python
 # ერთი წერტილის მიღება სურათიდან
-def get_pixel(img, x, y) -> np.uint8:
+def get_pixel(img, x, y):
   return img[x, y]
 
 
@@ -99,7 +99,7 @@ def set_pixel(img, x, y, r, g, b):
 
 
 # ერთი ფერის დანაწევრება 2 ბიტიან ფრაგმენტებად
-def chop(c) -> np.uint8:
+def chop(c):
   return c >> 6, (c & 48) >> 4, (c & 12) >> 2, (c & 3)
 
 
