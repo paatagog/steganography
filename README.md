@@ -15,7 +15,7 @@ In modern times, steganography is often used in digital media, such as images, a
 
 ## Example
 
-Suppose we want to hide the picture. We can you another, the bigger one for that purpose.
+Suppose we want to hide the picture. We can use another, the bigger one for that purpose.
 
 Suppose we want to hide little picture of the dog into the bigger picture of the cat.
 
