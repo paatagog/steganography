@@ -1,6 +1,10 @@
 # steganography
 Theory and practice
 
+For Georgian version click here<br/>
+ქართული ვერსიისთვის მიჰყევით შემდეგ ბმულს 
+- [Georgian](./README.ge.md)
+
 ## Definition
 
 Steganography is the practice of concealing a message, file, or other information within another object or message in a way that the presence of the hidden information is not apparent. It is often used to protect sensitive data or to secretly communicate messages.
