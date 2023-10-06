@@ -23,9 +23,9 @@ Suppose we want to hide little picture of the dog into the bigger picture of the
 
 Suppose that first pixel of dog picture is ($\color{red}{\text{145}}$, $\color{green}{\text{156}}$, $\color{blue}{\text{165}}$). In binary, we will have ($\color{red}{\text{10010001}}$, $\color{green}{\text{10011100}}$, $\color{blue}{\text{10100101}}$). We can hide these numbers if we slightly modify several pixels colors in cat picture. "Slightly" means that the modification will not be noticeable by human eye. Let's take 4 pixels in cat image and modify only last 2 digits of each pixels' colors. Here are cats' pixels (00101100, 00110001, 00111000) (00100010, 00100110, 00101100) (00011111, 00100001, 00101010) (00100001,  00100100, 00101110) and here are modified numbers for cat pixels (001011 $\color{red}{\text{10}}$, 001100 $\color{red}{\text{01}}$, 001110 $\color{red}{\text{00}}$) (001000 $\color{red}{\text{01}}$, 001001 $\color{green}{\text{10}}$, 001011 $\color{green}{\text{01}}$) (000111 $\color{green}{\text{11}}$, 001000 $\color{green}{\text{00}}$, 001010 $\color{blue}{\text{10}}$) (001000 $\color{blue}{\text{10}}$,  001001 $\color{blue}{\text{01}}$, 001011 $\color{blue}{\text{01}}$).
 
-We can hide other pixel of the dog picture the similay way.
+We can hide other pixel of the dog picture the similar way.
 
-The information will be distributed on the cat pictre. The distribution area for the picture will be four times larger than the dog picture. So it will not be noticable for human eye.
+The information will be distributed on the cat picture. The distribution area for the picture will be four times larger than the dog picture. So it will not be noticeable for human eye.
 
 ## Python Code
 Import the necessary libraries
@@ -36,7 +36,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 ```
 
-If we are going to use Google Colab, we should mount the Google Drive ar first and then read the picture files. We should skip this section if we are going to run the program locally!
+If we are going to use Google Colab, we should mount the Google Drive at first and then read the picture files. We should skip this section if we are going to run the program locally!
 
 Read the secret and the public pictures from the files.
 
